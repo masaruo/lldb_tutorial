@@ -1,10 +1,6 @@
 
 all:
-	cc -g3 -O0 -Wall -Wextra main.c -o sample
-	./sample
+	$(CC) -g split.c
+	./a.out
 
-asan:
-	cc -g main.c -o sample -fsanitize=address
-	./sample
-
-.PHONY: all asan
+.PHONY: all
